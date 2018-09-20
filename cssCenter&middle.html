@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css水平垂直居中方法总结</title>
+    <style>
+        /* common.css */
+        .wrap {
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+        }
+
+        .inner {
+            background: green;
+        }
+
+        .inner.innerSize{
+            width: 100px;
+            height: 100px;
+        }
+
+
+    /* 法一：定宽高（innerSize） position */
+        .wrap{
+            position: relative;
+        }
+        .inner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+    /* 法二：定宽高（innerSize） position */
+        /* .wrap{
+            position: relative;
+        }
+        .inner{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        } */
+    /* 法三：定宽高（innerSize） position */
+          /* .wrap{
+              position: relative;
+          }
+          .inner{
+              position: absolute;
+              top: calc(50% - 50px);
+              left: calc(50% - 50px);
+          } */
+    /* 法四：不定宽高 position */
+        /* .wrap{
+            position: relative;
+        }
+        .inner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } */
+    /* 法五：不定宽高 flex */
+        /* .wrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner{} */
+    /* 法六：不定宽高 table */
+          /* .wrap{
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+          }
+          .inner{
+              display: inline-block;
+          } */
+    /* 法七：不定宽高 gird布局 */
+          /* .wrap {
+              display: grid;
+          }
+          .inner {
+              align-self: center;
+              justify-self: center;
+          } */
+    </style>
+</head>
+<body>
+    <!-- 定宽高结构 -->
+    <div class="wrap">
+        <div class="inner innerSize">我要居中</div>
+    </div>
+
+    <!-- 不定宽高结构 -->
+    <div class="wrap">
+        <div class="inner">我要居中</div>
+    </div>
+</body>
+</html>
