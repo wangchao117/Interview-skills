@@ -53,8 +53,17 @@
                       sessionStorage是在页面关闭是清除
                       cookie在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
 
-7.
+7.如何实现浏览器多个标签页之间的通讯
+  WebSocket、SharedWorker；
+  也可以调用localstorge、cookies等本地存储方式；
+    localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，
+    我们通过监听事件，控制它的值来进行页面信息通信
 
+8.页面可见性（Page Visibility API） 可以有哪些用途
+  通过 visibilityState 的值检测页面当前是否可见，以及打开网页的时间等;
+  在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放;
+
+9.
 
 
 
